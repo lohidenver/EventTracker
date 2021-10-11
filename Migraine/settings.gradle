@@ -1,0 +1,4 @@
+rootProject.name = 'Migraine'
+
+includeFlat 'JPAMigraine'
+
