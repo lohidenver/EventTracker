@@ -25,17 +25,22 @@ import com.skilldistillery.migraine.services.MigraineService;
 public class MigraineController {
 
 	@Autowired
-	private MigraineService svc;
+	private MigraineService migraineSvc;
 
 	@GetMapping("migraine")
 	public List<Migraine> index() {
-		return svc.allMigraines();
+		return migraineSvc.allMigraines();
 	}
+	
+	@GetMapping("pain/search/intensity/{low}/{high}")
+	  public List<Migraine> getMigrainesWithinAnIntensityRange(@PathVariable int low,@PathVariable int high){
+		  return migraineSvc.allMigrainesWithinAnIntensityRange(low, high);
+	  }
 	
 	//CRUD - CREATE
 	@PostMapping("migraine")
     public Migraine addMigraine(@RequestBody Migraine migraine, HttpServletRequest req, HttpServletResponse resp) {
-		migraine = svc.create(migraine);
+		migraine = migraineSvc.create(migraine);
         if (migraine != null) {
             resp.setStatus(201);
             StringBuffer sb = req.getRequestURL();
@@ -48,8 +53,8 @@ public class MigraineController {
 	//CRUD - READ
 	@RequestMapping(path="migraine/{id}", method=RequestMethod.GET)
 	 public Migraine show(@PathVariable int id, HttpServletResponse resp){
-		if (svc.findById(id) != null ) {
-	   return svc.findById(id);
+		if (migraineSvc.findById(id) != null ) {
+	   return migraineSvc.findById(id);
 		} else {
 			resp.setStatus(404);
 		return null;
@@ -60,8 +65,8 @@ public class MigraineController {
 	 @DeleteMapping("migraine/{id}")
 	    public void deleteComment(@PathVariable("id") Integer id, HttpServletResponse resp) {
 	       
-	        if (svc.findById(id) != null) {
-	        	svc.deleteById(id);
+	        if (migraineSvc.findById(id) != null) {
+	        	migraineSvc.deleteById(id);
 	        	resp.setStatus(204);
 	            }
 	    }
@@ -73,7 +78,7 @@ public class MigraineController {
 			  @RequestBody Migraine migraine, HttpServletRequest req,
 				 HttpServletResponse resp) {
 		
-		return svc.updateMigraine(id, migraine); 
+		return migraineSvc.updateMigraine(id, migraine); 
 	}
 	
 }//End Class

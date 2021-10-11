@@ -5,9 +5,10 @@ import java.util.List;
 import com.skilldistillery.migraine.entities.Migraine;
 
 public interface MigraineService {
+	
 	List<Migraine> allMigraines();
 
-	//List<Migraines> allMigrainesWithinAnIntensityRange(int low, int high);
+	List<Migraine> allMigrainesWithinAnIntensityRange(int low, int high);
 
 	Migraine create(Migraine migraine);
 

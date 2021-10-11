@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.skilldistillery.migraine.entities.Migraine;
 import com.skilldistillery.migraine.repositories.MigraineRepository;
 
+@Service
 public class MigraineServiceImpl implements MigraineService {
 	
 	@Autowired
@@ -51,6 +53,12 @@ public class MigraineServiceImpl implements MigraineService {
 	@Override
 	public List<Migraine> findByMigraineTrigger(String keyword) {
 		return repo.findByMigraineTrigger(keyword);
+	}
+
+	@Override
+	public List<Migraine> allMigrainesWithinAnIntensityRange(int low, int high) {
+		List<Migraine> migraines = repo.findByIntensityBetween(low, high);
+		return migraines;
 	}
 
 }
