@@ -8,3 +8,6 @@ Creating a SQL database with MySQLWorkbench.
 Mapping an entity to a SQL table.
 Using JUnit tests to test if mapping is correct.
 Creating basic front end crud/curd operations.
+
+Problems
+When I went to recreate my project I had problems with running my program because I kept getting an access denied with my database because I changed it.
