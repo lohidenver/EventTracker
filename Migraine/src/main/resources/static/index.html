@@ -12,25 +12,26 @@
 
 	<h1><center>Migraine Tracker</center></h1>
 	<hr>
-
+Highlight and click on entry to update or delete!
  <table id="migraineData" class="center">
+
     <!-- <tbody >
     </tbody> -->
   </table>
   	<br>
-<div id="avgMigraine"></div>  	<br>  	<br>  	<br>  	<br>
-	<form name="migraineForm">
+<div id="avgMigraine" style="color: #ffffff"></div>  	<br>  	<br>  	<br>  	<br>
+	<form name="migraineForm" style="color: #ffffff;">
 		<input type='hidden' name='migraineId' id='migraineId' />
 		How	painful?
-		<input type='number' name='intensity' id='intensity' placeholder='Scale: 1-10'  value="" min="1" max="10"/><br> 
+		<input type='number' name='intensity' id='intensity' placeholder='Scale: 1-10'  value="" min="1" max="10"/><br> <br>
 		When did it start?<span class="tab"></span>
 		<input type='datetime-local' name='migraineStartDate' id='migraineStartDate' placeholder='Time and Date' /><br> 
 		When did it end? <span class="tab"></span>
-		<input type='datetime-local' name='migraineEndDate' id='migraineEndDate' placeholder='Time and Date' /><br>
+		<input type='datetime-local' name='migraineEndDate' id='migraineEndDate' placeholder='Time and Date' /><br><br>
 		What triggered your migraine? 
-		<input type='text' name='migraineTrigger' id='migraineTrigger'	placeholder='Stress? Depression?' /><br> 
+		<input type='text' name='migraineTrigger' id='migraineTrigger'	placeholder='Stress? Depression? Unknown?' /><br> 
 		What treatment did you receive? 
-		<input type='text' name='typeOfTreatment' id='typeOfTreatment'	placeholder='Sumatriptan? Botox?' /><br> 
+		<input type='text' name='typeOfTreatment' id='typeOfTreatment'	placeholder='Sumatriptan? Botox? Bullet?' /><br> 
 		<input type='submit' name='addMigraine' value='Add new migraine' />
 		
 	</form>

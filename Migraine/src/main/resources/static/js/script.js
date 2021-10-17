@@ -71,11 +71,9 @@ function getMigraineById(id) {
 
 }
 
-
-
 function displayMigraine(migraine) {
   var d1 = document.getElementById('migraineData');
-
+  
   console.log("displayMigraine");
 
   d1.textContent = '';
@@ -86,7 +84,7 @@ function displayMigraine(migraine) {
   migraine.forEach(function(value, index, array) {
 
     console.log(value);
-
+  
     let p1 = document.createElement('td');
     let p2 = document.createElement('td');
     let p3 = document.createElement('td');
@@ -129,7 +127,7 @@ function displayMigraine(migraine) {
   var d2 = document.getElementById('avgMigraine');
   console.log(avgTotal.toFixed(2));
   d2.textContent = " ";
-  d2.textContent = "You average migraine intensity is " + avgTotal.toFixed(2);
+  d2.textContent = "Your average migraine intensity is " + avgTotal.toFixed(2);
   console.log(d2);
 
 }
