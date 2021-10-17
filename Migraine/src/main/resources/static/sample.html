@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>PainTrackerREST</title>
+  <script src="js/script.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+  <table id="painData">
+    <!-- <tbody >
+
+    </tbody> -->
+  </table>
+
+
+  <br>
+
+  <form name="painForm">
+    <input type='hidden' name='painId' id='painId' />
+    <input type='text' name='painLocation' id='painLocation' placeholder='Pain Location' /><br>
+    <input type='text' name='intensity' id='intensity' placeholder='Intensity' /><br>
+    <input type='text' name='painStartDate' id='painStartDate' placeholder='When it started' /><br>
+    <input type='text' name='painEndDate' id='painEndDate' placeholder='When it ended' /><br>
+    <input type='text' name='painTrigger' id='painTrigger' placeholder='What triggered it?' /><br>
+    <input type='text' name='typeOfPain' id='typeOfPain' placeholder='Type of pain' /><br>
+    <input type='submit' name='addPain' value='Add new pain' />
+  </form>
+
+  <div id="avgPain">
+
+  </div>
+
+</body>
+
+</html>

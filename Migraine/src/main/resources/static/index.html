@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+ <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<title>A bullet to the head please!</title>
+<script src="js/script.js" charset="utf-8"></script>
+</head>
+
+<body>
+
+	<h1><center>Migraine Tracker</center></h1>
+	<hr>
+
+ <table id="migraineData" class="center">
+    <!-- <tbody >
+    </tbody> -->
+  </table>
+  	<br>
+<div id="avgMigraine"></div>  	<br>  	<br>  	<br>  	<br>
+	<form name="migraineForm">
+		<input type='hidden' name='migraineId' id='migraineId' />
+		How	painful?
+		<input type='number' name='intensity' id='intensity' placeholder='Scale: 1-10'  value="" min="1" max="10"/><br> 
+		When did it start?<span class="tab"></span>
+		<input type='datetime-local' name='migraineStartDate' id='migraineStartDate' placeholder='Time and Date' /><br> 
+		When did it end? <span class="tab"></span>
+		<input type='datetime-local' name='migraineEndDate' id='migraineEndDate' placeholder='Time and Date' /><br>
+		What triggered your migraine? 
+		<input type='text' name='migraineTrigger' id='migraineTrigger'	placeholder='Stress? Depression?' /><br> 
+		What treatment did you receive? 
+		<input type='text' name='typeOfTreatment' id='typeOfTreatment'	placeholder='Sumatriptan? Botox?' /><br> 
+		<input type='submit' name='addMigraine' value='Add new migraine' />
+		
+	</form>
+	
+
+	
+
+</body>
+
+</html>

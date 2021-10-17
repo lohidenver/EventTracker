@@ -32,7 +32,7 @@ public class MigraineController {
 		return migraineSvc.allMigraines();
 	}
 	
-	@GetMapping("pain/search/intensity/{low}/{high}")
+	@GetMapping("migraine/search/intensity/{low}/{high}")
 	  public List<Migraine> getMigrainesWithinAnIntensityRange(@PathVariable int low,@PathVariable int high){
 		  return migraineSvc.allMigrainesWithinAnIntensityRange(low, high);
 	  }
