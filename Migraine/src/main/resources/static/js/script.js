@@ -90,6 +90,9 @@ function displayMigraine(migraine) {
     let p3 = document.createElement('td');
     let p4 = document.createElement('td');
     let p5 = document.createElement('td');
+     let p6 = document.createElement('td');
+    
+    
     
     
     var pId = document.createElement('tr');
@@ -97,6 +100,7 @@ function displayMigraine(migraine) {
       popUp(value);
     })
     console.log("got here");
+  
   
     p1.textContent = value.intensity;
     p2.textContent = value.migraineStartDate;
@@ -110,6 +114,7 @@ function displayMigraine(migraine) {
     pId.appendChild(p3);
     pId.appendChild(p4);
     pId.appendChild(p5);
+    
  
 
 
